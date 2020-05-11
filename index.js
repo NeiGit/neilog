@@ -1,8 +1,8 @@
 import getCallerFile from 'get-caller-file'
 
 export class Logger {
-    constructor() {
-        this.fileName = getCallerFileName()
+    constructor(fileName = getCallerFileName()) {
+        this.fileName = fileName
     }
 
     log(header, msg) {
