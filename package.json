@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "neilog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logger service with file name",
   "main": "index.js",
   "scripts": {
