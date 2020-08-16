@@ -3,9 +3,11 @@ import getCallerFile from 'get-caller-file'
 export class Logger {
     constructor(fileName = getCallerFileName()) {
         this.fileName = fileName
+        this.disabled = Boolean(process.env.disableLogger)
     }
 
     log(header, msg) {
+        if (this.disabled) return
         const date = toTimeOnly(new Date())
         console.log(`${header} - ${date} - ${this.fileName} - ${msg}`)
     }
